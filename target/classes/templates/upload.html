@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <form id="uploadForm" enctype="multipart/form-data">
+        文件上传：<input type="file" id="file" name="file"/>
+        <input type="button" value="提交" onclick="excelUpload()"/>
+    </form>
+</body>
+<script>
+    function excelUpload() {
+        var file = document.getElementById("file");
+        if(file.value==null||file.value==""){
+            alert("文件不能为空");
+        }
+        var formData = new FormData($('#uploadForm')[0]);
+
+        $.ajax({
+            url: 'upload',
+            type: 'POST',
+            cache: false,
+            data:formData,
+            processData: false,
+            contentType: false,
+            success:function (data) {
+                alert(data);
+            },
+            error:function (data) {
+                alert(data);
+            }
+        });
+    }
+</script>
+</html>
