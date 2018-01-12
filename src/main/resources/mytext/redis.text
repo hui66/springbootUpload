@@ -1,0 +1,23 @@
+1.redis能够根据键值对的形式存储。
+   保存方式  jedis.set("myname","zz"); 保存成功返回OK;
+   获取方式  jedis.get("myname"); 返回值String类型
+   删除键    jedis.del("myname"); 删除成功是1 否则是0
+   序列化    jedis.dump("myname"); 序列化key,返回了一个地址值（不是很明白）
+   判断key是否存在 jedis.exist(); 返回true|false
+   设置过期时间 jedis.expire; 返回 1(设置多少分钟之后);
+   设置过期时间 jedis.expireAt; 返回 1(时间戳);
+   设置过期时间 jedis.pexpireAt; 返回 1(毫秒级);
+   获取指定模式的所有key jedis.keys();
+   将key移动到指定的数据库当中去
+      jedis.move(key,int dbindex);
+   持久化键
+      jedis.persist(key);
+   获取到jedis指定的值 ，以毫秒进行返回
+      jedis.pttl(key);
+   随机的获取到数据库中的键
+      jedis.randomKey();
+   为数据库中键重新赋值
+      jedis.rename(oldkey,newkey);
+   获取键的值的类型
+      jedis.type(key);
+2. redis 以字符串类型存储
