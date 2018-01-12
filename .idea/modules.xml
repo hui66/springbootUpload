@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/uploadExcel.iml" filepath="$PROJECT_DIR$/uploadExcel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootUpload.iml" filepath="$PROJECT_DIR$/springbootUpload.iml" />
     </modules>
   </component>
 </project>
