@@ -1,4 +1,4 @@
 package cn.com.zhui.controller;
 
-public class redisController {
+public class RedisController {
 }

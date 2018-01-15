@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 @Controller
-public class createXmlController {
+public class CreateXmlController {
 
     @RequestMapping("myXml")
     public String myXml(){
